@@ -24,7 +24,7 @@ body,
   top: 0px;
   background: #a9ff99;
   z-index: 1;
-  min-width: 800px;
+  min-width: 80px;
 }
 
 #logo {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Tetris from '../components/Tetris';
+import Game from '../components/Game'; // Changed Tetris to Game
 import VolenteerExperience from '../components/VolenteerExperience';
 
 class ChillContainer extends React.Component {
@@ -36,7 +36,7 @@ class ChillContainer extends React.Component {
               {this.state.currentlyShowing === "Chill"
                 ?
                 <div>
-                  <Tetris />
+                  <Game rows={20} columns={10} /> {/* Replaced Tetris with Game */}
                   {/* <button className="buttons about-buttons" name="More" onClick={this.handleShowingChange} >Besides Coding...</button> */}
                 </div>
                 : 

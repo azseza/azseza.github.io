@@ -54,7 +54,8 @@ export const nextBoard = ({ board, player, resetPlayer, addLinesCleared }) => {
   rows = transferToBoard({
     className,
     isOccupied: player.isFastDropping,
-    position: dropPosition,
+    // Use actual position if fast dropping, otherwise use dropPosition for ghost
+    position: player.isFastDropping ? position : dropPosition,
     rows,
     shape: tetromino.shape
   });
@@ -89,13 +90,7 @@ export const nextBoard = ({ board, player, resetPlayer, addLinesCleared }) => {
     addLinesCleared(linesCleared);
   }
 
-  rows = transferToBoard({
-    className: tetromino.className,
-    isOccupied: player.collided,
-    position,
-    rows,
-    shape: tetromino.shape
-  });
+  // The redundant transferToBoard call that was here has been removed.
 
   if (player.collided || player.isFastDropping) {
     resetPlayer();

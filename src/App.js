@@ -39,6 +39,11 @@ const Navigation = () => {
         <a href="https://www.linkedin.com/in/azer-ltifi-528284120/" target="_blank" rel="noopener noreferrer">
           <img src={linkedInLogo} alt='Link to LinkedIn profile' className="icons" />
         </a>
+        <a href="https://x.com/AzeerLtifi" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" className="icons x-icon" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/>
+          </svg>
+        </a>
         <a href={`mailto:azeer.ltifi@gmail.com`}>
           <img src={require("./media/send.png")} alt='Send me an e-mail' className="icons" />
         </a>

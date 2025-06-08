@@ -1,6 +1,6 @@
 import React from 'react';
 import About from '../components/About';
-import VolenteerEcperience from '../components/VolenteerExperience';
+import VolenteerExperience from '../components/VolenteerExperience';
 
 class AboutContainer extends React.Component {
 
@@ -41,7 +41,7 @@ class AboutContainer extends React.Component {
               </div>
               : 
               <div>
-                <VolenteerEcperience />
+                <VolenteerExperience />
               </div>
             }
         </div>

@@ -4,13 +4,16 @@
   "private": true,
   "homepage": "https://azseza.github.io/",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "konva": "^9.2.3",
+    "loader-utils": "3.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "loader-utils": "3.2.1",
-    "react-router-dom": "^5.3.4",
+    "react-konva": "^18.2.10",
+    "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -42,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/react-router-dom": "^5.3.3",
     "gh-pages": "^6.1.1"
   }

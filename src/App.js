@@ -1,15 +1,55 @@
 import './App.css';
 import React from 'react';
-import {Route, Switch, NavLink} from 'react-router-dom';
+import { Route, Routes, NavLink, useLocation } from 'react-router-dom';
 import './App.css';
 import ChillContainer from './containers/ChillContainer';
 import AboutContainer from './containers/AboutContainer';
 import ResumeContainer from './containers/ResumeContainer';
 import HomeContainer from './containers/HomeContainer';
-import Contact from './containers/ContactContainer';
+import ContactContainer from './containers/ContactContainer';
 import NotFound from './components/NotFound';
 import linkedInLogo from './media/linkedin-icon.svg';
 import gitHubLogo from './media/github-icon.svg';
+
+const Navigation = () => {
+  const location = useLocation();
+  
+  return (
+    <nav id="navbar">
+      <NavLink to='/' className="navbar-links">
+        <img src={require("./media/logo.png")} alt='' id="logo" />
+      </NavLink>
+      <div className="nav-links">
+        <NavLink to='/' className={`navbar-links ${location.pathname === '/' ? 'active' : ''}`}>
+          01. Home
+        </NavLink>
+        <NavLink to='/chill' className={`navbar-links ${location.pathname === '/chill' ? 'active' : ''}`}>
+          02. Play Tetris
+        </NavLink>
+        <NavLink to='/resume' className={`navbar-links ${location.pathname === '/resume' ? 'active' : ''}`}>
+          03. Résumé
+        </NavLink>
+        <NavLink to='/about' className={`navbar-links ${location.pathname === '/about' ? 'active' : ''}`}>
+          04. About
+        </NavLink>
+        <NavLink to='/contact' className={`navbar-links ${location.pathname === '/contact' ? 'active' : ''}`}>
+          05. Contact
+        </NavLink>
+      </div>
+      <div id="social-links-div">
+        <a href="https://github.com/azseza" target="_blank" rel="noopener noreferrer">
+          <img src={gitHubLogo} alt='Link to github profile' className="icons" />
+        </a>
+        <a href="https://www.linkedin.com/in/azer-ltifi-528284120/" target="_blank" rel="noopener noreferrer">
+          <img src={linkedInLogo} alt='Link to LinkedIn profile' className="icons" />
+        </a>
+        <a href={`mailto:azeer.ltifi@gmail.com`}>
+          <img src={require("./media/send.png")} alt='Send me an e-mail' className="icons" />
+        </a>
+      </div>
+    </nav>
+  );
+};
 
 class App extends React.Component {
 
@@ -29,48 +69,24 @@ class App extends React.Component {
     })
   }
   
-  renderChillContainer = () => <ChillContainer forceUpdate={this.state.forceUpdate} handleForceUpdateFalse={this.handleForceUpdateFalse} />
-  renderAboutContainer = () => <AboutContainer forceUpdate={this.state.forceUpdate} handleForceUpdateFalse={this.handleForceUpdateFalse} />
-  renderResumeContainer = () => <ResumeContainer forceUpdate={this.state.forceUpdate} handleForceUpdateFalse={this.handleForceUpdateFalse} />
-
-
   render() {
 
     return (
 
       <div id="homepage">
   
-        <div id="navbar">   
-          <NavLink to='/' exact className="navbar-links" >
-              <img src={require("./media/logo.png")} alt='' id="logo" />
-          </NavLink>     
-          <NavLink to='/contact' exact className="navbar-links" >05. Contact</NavLink>
-          <NavLink to='/about' exact className="navbar-links" onClick={this.handleForceUpdateTrue} >04. About</NavLink>
-          <NavLink to='/resume' exact className="navbar-links" onClick={this.handleForceUpdateTrue} >03. Résumé</NavLink>
-          <NavLink to='/chill' exact className="navbar-links" onClick={this.handleForceUpdateTrue} >02. Chill</NavLink>
-          <NavLink to='/' exact className="navbar-links" >01. Home</NavLink>
-        </div >
+        <Navigation />
   
-        <div id="social-links-div">
-          <a href="https://github.com/azseza" >
-            <img src={gitHubLogo} alt='Link to github profile' className="icons" />
-          </a>
-          <a href="https://www.linkedin.com/in/azer-ltifi-528284120/" >
-            <img src={linkedInLogo} alt='Link to LinkedIn profile' className="icons" />
-          </a>
-          <a href={`mailto:azeer.ltifi@gmail.com`} >
-            <img src={require("./media/send.png")} alt='Send me an e-mail' className="icons" />
-          </a>
-        </div>     
-  
-        <Switch>
-          <Route exact path='/' component={HomeContainer} />
-          <Route exact path='/about' component={this.renderAboutContainer} />
-          <Route exact path='/chill' component={this.renderChillContainer} />
-          <Route exact path='/resume' component={this.renderResumeContainer} />
-          <Route exact path='/contact' component={Contact} />
-          <Route component={NotFound}/>
-        </Switch>
+        <main className="main-content">
+          <Routes>
+            <Route path='/' element={<HomeContainer />} />
+            <Route path='/about' element={<AboutContainer forceUpdate={this.state.forceUpdate} handleForceUpdateFalse={this.handleForceUpdateFalse} />} />
+            <Route path='/chill' element={<ChillContainer forceUpdate={this.state.forceUpdate} handleForceUpdateFalse={this.handleForceUpdateFalse} />} />
+            <Route path='/resume' element={<ResumeContainer forceUpdate={this.state.forceUpdate} handleForceUpdateFalse={this.handleForceUpdateFalse} />} />
+            <Route path='/contact' element={<ContactContainer />} />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+        </main>
   
       </div>
     

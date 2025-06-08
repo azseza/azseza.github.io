@@ -1,6 +1,7 @@
 import React from 'react';
-import Game from '../components/Game'; // Changed Tetris to Game
+import Tetris from '../components/Tetris';
 import VolenteerExperience from '../components/VolenteerExperience';
+import './ChillContainer.css';
 
 class ChillContainer extends React.Component {
 
@@ -31,16 +32,26 @@ class ChillContainer extends React.Component {
     
         return (
     
-          <div className="containers one-second-animation" id="about-container">
-              <h2 className="h2" >Hello!</h2>
+          <div className="chill-container">
+              <h2>Take a Break and Play Tetris!</h2>
               {this.state.currentlyShowing === "Chill"
                 ?
-                <div>
-                  <Game rows={20} columns={10} /> {/* Replaced Tetris with Game */}
-                  {/* <button className="buttons about-buttons" name="More" onClick={this.handleShowingChange} >Besides Coding...</button> */}
+                <div className="game-wrapper">
+                  <Tetris rows={20} columns={10} />
+                  <div className="game-controls">
+                    <h3>Controls:</h3>
+                    <ul>
+                      <li>← → : Move left/right</li>
+                      <li>↑ : Rotate</li>
+                      <li>↓ : Soft drop</li>
+                      <li>Space : Hard drop</li>
+                      <li>P : Pause</li>
+                    </ul>
+                    <p className="mobile-controls">On mobile: Swipe to move, tap to rotate</p>
+                  </div>
                 </div>
                 : 
-                <div>
+                <div className="volunteer-section">
                   <VolenteerExperience />
                 </div>
               }

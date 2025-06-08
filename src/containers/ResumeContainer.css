@@ -1,0 +1,101 @@
+.resume-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  background: rgba(45, 45, 45, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resume-container {
+  color: #ffffff;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.resume-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #64ffda;
+}
+
+.resume-header p {
+  font-size: 1.2rem;
+  color: #8892b0;
+}
+
+.resume-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resume-section h3 {
+  color: #64ffda;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.resume-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resume-section li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.resume-section li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #64ffda;
+}
+
+.job, .education-item, .project-placeholder {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+}
+
+.job h4, .education-item h4, .project-placeholder h4 {
+  color: #8892b0;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-section {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.contact-info-section p {
+  color: #8892b0;
+}
+
+@media (max-width: 768px) {
+  .resume-page {
+    padding: 1rem;
+  }
+
+  .resume-header h1 {
+    font-size: 2rem;
+  }
+
+  .resume-header p {
+    font-size: 1rem;
+  }
+
+  .resume-section {
+    padding: 1rem;
+  }
+} 

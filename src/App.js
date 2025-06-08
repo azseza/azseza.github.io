@@ -3,7 +3,6 @@ import React from 'react';
 import { Route, Routes, NavLink, useLocation } from 'react-router-dom';
 import './App.css';
 import ChillContainer from './containers/ChillContainer';
-import AboutContainer from './containers/AboutContainer';
 import ResumeContainer from './containers/ResumeContainer';
 import HomeContainer from './containers/HomeContainer';
 import ContactContainer from './containers/ContactContainer';
@@ -29,11 +28,8 @@ const Navigation = () => {
         <NavLink to='/resume' className={`navbar-links ${location.pathname === '/resume' ? 'active' : ''}`}>
           03. Résumé
         </NavLink>
-        <NavLink to='/about' className={`navbar-links ${location.pathname === '/about' ? 'active' : ''}`}>
-          04. About
-        </NavLink>
         <NavLink to='/contact' className={`navbar-links ${location.pathname === '/contact' ? 'active' : ''}`}>
-          05. Contact
+          04. Contact
         </NavLink>
       </div>
       <div id="social-links-div">
@@ -52,47 +48,38 @@ const Navigation = () => {
 };
 
 class App extends React.Component {
-
   state = {
     forceUpdate: false
   }
 
   handleForceUpdateTrue = () => {
-    this.setState ({
+    this.setState({
       forceUpdate: true
     })
   }
 
   handleForceUpdateFalse = () => {
-    this.setState ({
+    this.setState({
       forceUpdate: false
     })
   }
   
   render() {
-
     return (
-
       <div id="homepage">
-  
         <Navigation />
-  
         <main className="main-content">
           <Routes>
-            <Route path='/' element={<HomeContainer />} />
-            <Route path='/about' element={<AboutContainer forceUpdate={this.state.forceUpdate} handleForceUpdateFalse={this.handleForceUpdateFalse} />} />
-            <Route path='/chill' element={<ChillContainer forceUpdate={this.state.forceUpdate} handleForceUpdateFalse={this.handleForceUpdateFalse} />} />
-            <Route path='/resume' element={<ResumeContainer forceUpdate={this.state.forceUpdate} handleForceUpdateFalse={this.handleForceUpdateFalse} />} />
-            <Route path='/contact' element={<ContactContainer />} />
-            <Route path='*' element={<NotFound />} />
+            <Route path="/" element={<HomeContainer />} />
+            <Route path="/chill" element={<ChillContainer forceUpdate={this.state.forceUpdate} handleForceUpdateFalse={this.handleForceUpdateFalse} />} />
+            <Route path="/resume" element={<ResumeContainer forceUpdate={this.state.forceUpdate} handleForceUpdateFalse={this.handleForceUpdateFalse} />} />
+            <Route path="/contact" element={<ContactContainer />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
-  
       </div>
-    
     );
-
   }
-
 }
+
 export default App;

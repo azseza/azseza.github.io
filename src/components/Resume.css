@@ -1,0 +1,237 @@
+.resume-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+}
+
+.resume-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #64ffda;
+  letter-spacing: 1px;
+}
+
+.resume-header .title {
+  font-size: 1.5rem;
+  color: #8892b0;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  color: #8892b0;
+  font-size: 1.1rem;
+}
+
+.resume-section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.resume-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.resume-section h3 {
+  color: #64ffda;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.resume-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resume-section li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #8892b0;
+  line-height: 1.6;
+}
+
+.resume-section li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #64ffda;
+}
+
+.job {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.job-header h4 {
+  color: #64ffda;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.period {
+  color: #8892b0;
+  font-size: 0.9rem;
+}
+
+.technologies {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #8892b0;
+  font-size: 0.9rem;
+}
+
+.education-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+}
+
+.education-item h4 {
+  color: #64ffda;
+  margin-bottom: 0.5rem;
+}
+
+.education-item p {
+  color: #8892b0;
+  margin: 0;
+}
+
+.tech-category {
+  margin-bottom: 1.5rem;
+}
+
+.tech-category h4 {
+  color: #64ffda;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.tech-category p {
+  color: #8892b0;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.languages-section li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2rem;
+}
+
+.languages-section strong {
+  color: #64ffda;
+}
+
+.download-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: #64ffda;
+  border: 1px solid #64ffda;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover {
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(100, 255, 218, 0.2);
+}
+
+.event-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64ffda;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.event-link:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.event-link svg {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .resume-container {
+    padding: 1rem;
+  }
+
+  .resume-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .resume-header .title {
+    font-size: 1.2rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .job-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-section {
+    padding: 1rem;
+  }
+
+  .download-button {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+  }
+} 

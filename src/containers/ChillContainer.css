@@ -1,13 +1,10 @@
 .chill-container {
-  position: fixed;
-  top: 70px;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding-bottom: 3rem;
+  min-height: calc(100vh - 120px);
 }
 
 .chill-container h2 {
@@ -35,8 +32,8 @@
   justify-content: center;
   flex: 1;
   min-height: 0;
-  padding: 0 1rem;
-  overflow: hidden;
+  padding: 0 1rem 2rem;
+  overflow: visible;
 }
 
 .game-controls {
@@ -91,7 +88,8 @@
   padding: 2rem;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 2rem;
+  margin: 2rem auto 0;
+  width: min(960px, 92%);
 }
 
 @media (max-width: 768px) {
@@ -106,8 +104,5 @@
   }
 
   .game-controls {
-    width: 100%;
-    max-width: 400px;
-    order: 2;
   }
 } 

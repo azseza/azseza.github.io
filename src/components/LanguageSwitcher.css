@@ -1,0 +1,58 @@
+.language-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.language-select {
+  background: rgba(10, 25, 47, 0.85);
+  border: 1px solid rgba(100, 255, 218, 0.4);
+  color: #64ffda;
+  border-radius: 999px;
+  padding: 0.35rem 1.75rem 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  appearance: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.language-select:focus {
+  outline: none;
+  border-color: rgba(100, 255, 218, 0.7);
+  box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.25);
+}
+
+.language-select:hover {
+  background: rgba(100, 255, 218, 0.15);
+}
+
+.language-select option {
+  background: #0a192f;
+  color: #64ffda;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .language-select {
+    width: 100%;
+    max-width: 240px;
+  }
+}

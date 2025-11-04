@@ -1,9 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { FaServer, FaCloud, FaRobot, FaUsersCog } from 'react-icons/fa';
 import './Home.css';
 
+const ICON_MAP = {
+  server: FaServer,
+  cloud: FaCloud,
+  robot: FaRobot,
+  team: FaUsersCog
+};
+
 const Home = () => {
+  const { t } = useTranslation();
   const [currentSymbol, setCurrentSymbol] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
 
@@ -18,46 +27,16 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const highlightCards = [
-    {
-      title: 'Back-end Craftsmanship',
-      description: 'Designing APIs and distributed services with Spring Boot, Django, and PostgreSQL that pair resilience with clean architecture.',
-      icon: <FaServer />
-    },
-    {
-      title: 'Cloud-Native Delivery',
-      description: 'Automating releases across AWS, GCP, Docker, and Kubernetes to keep features landing safely in production.',
-      icon: <FaCloud />
-    },
-    {
-      title: 'Applied AI & NLP',
-      description: 'Shipping language-aware experiences that blend machine learning with pragmatic product goals and measurable impact.',
-      icon: <FaRobot />
-    },
-    {
-      title: 'Human-Friendly Collaboration',
-      description: 'Leading squads, mentoring engineers, and translating complex roadmaps into shared wins for teams and stakeholders.',
-      icon: <FaUsersCog />
-    }
-  ];
+  const highlightData = t('home.highlights', { returnObjects: true }) || [];
+  const highlights = highlightData.map((item) => {
+    const Icon = ICON_MAP[item.icon] || FaUsersCog;
+    return { ...item, Icon };
+  });
 
-  const journeyMilestones = [
-    {
-      period: '2024 · UBIAI',
-      title: 'NLP Specialist & Platform Engineer',
-      description: 'Brought AI-powered annotation workflows to life with Angular and Django, while hardening DevOps pipelines on AWS.'
-    },
-    {
-      period: '2023 · Sisal',
-      title: 'Experience Engineering',
-      description: 'Merged AEM, Java, and Vanilla JS to deliver dynamic, high-traffic content experiences and collaborative authoring tools.'
-    },
-    {
-      period: '2022 · NST Groupe',
-      title: 'Global Fisheries Platform',
-      description: 'Built a full-stack monitoring suite for the Republic of Congo, blending Angular, Spring Boot, and DevOps automation.'
-    }
-  ];
+  const journeyMilestones = t('home.journey', { returnObjects: true }) || [];
+
+  const highlightsTitle = t('home.highlightsTitle', { defaultValue: 'What I Bring To The Team' });
+  const journeyTitle = t('home.journeyTitle', { defaultValue: 'Recent Wins On The Ground' });
 
   return (
     <div className="home-container">
@@ -94,31 +73,34 @@ const Home = () => {
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg" alt="Angular" />
           </div>
         </div>
-        <h1>Hi, I'm Azer Ltifi</h1>
-        <h2>Full Stack Developer</h2>
-        <p>I build things for the web.</p>
+        <h1>{t('home.greeting', { defaultValue: "Hi, I'm Azer Ltifi" })}</h1>
+        <h2>{t('home.role', { defaultValue: 'Full Stack Developer' })}</h2>
+        <p>{t('home.tagline', { defaultValue: 'I build things for the web.' })}</p>
         <div className="cta-buttons">
-          <Link to="/resume" className="cta-button primary">View My Work</Link>
-          <Link to="/contact" className="cta-button secondary">Get In Touch</Link>
+          <Link to="/resume" className="cta-button primary">{t('home.cta.primary', { defaultValue: 'View My Work' })}</Link>
+          <Link to="/contact" className="cta-button secondary">{t('home.cta.secondary', { defaultValue: 'Get In Touch' })}</Link>
         </div>
         <section className={`home-highlights ${isMounted ? 'visible' : ''}`}>
-          <h3>What I Bring To The Team</h3>
+          <h3>{highlightsTitle}</h3>
           <div className="highlight-grid">
-            {highlightCards.map((card, index) => (
-              <article
-                className="highlight-card"
-                key={card.title}
-                style={{ transitionDelay: `${index * 120}ms` }}
-              >
-                <div className="icon-wrapper">{card.icon}</div>
-                <h4>{card.title}</h4>
-                <p>{card.description}</p>
-              </article>
-            ))}
+            {highlights.map((card, index) => {
+              const IconComponent = card.Icon || FaUsersCog;
+              return (
+                <article
+                  className="highlight-card"
+                  key={`${card.title}-${index}`}
+                  style={{ transitionDelay: `${index * 120}ms` }}
+                >
+                  <div className="icon-wrapper"><IconComponent /></div>
+                  <h4>{card.title}</h4>
+                  <p>{card.description}</p>
+                </article>
+              );
+            })}
           </div>
         </section>
         <section className={`home-journey ${isMounted ? 'visible' : ''}`}>
-          <h3>Recent Wins On The Ground</h3>
+          <h3>{journeyTitle}</h3>
           <div className="journey-timeline">
             {journeyMilestones.map((milestone, index) => (
               <div

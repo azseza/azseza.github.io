@@ -18,7 +18,8 @@ const resources = {
         home: '01. Home',
         chill: '02. Chill With Me',
         resume: '03. Résumé',
-        contact: '04. Contact'
+        contact: '04. Contact',
+        toggle: 'Menu'
       },
       home: {
         greeting: "Hi, I'm Azer Ltifi",
@@ -28,6 +29,8 @@ const resources = {
           primary: 'View My Work',
           secondary: 'Get In Touch'
         },
+        highlightsTitle: 'What I Bring To The Team',
+        journeyTitle: 'Recent Wins On The Ground',
         highlights: [
           {
             icon: 'server',
@@ -54,22 +57,23 @@ const resources = {
           {
             period: '2024 · Tabhotel',
             title: 'Hospitality SaaS Evolution',
-            description: 'Modernising booking, upsell, and loyalty flows for boutique hotels with Angular micro frontends and Django APIs.'
+            description: 'Leading guest onboarding, upsell, and loyalty journeys for boutique hotels with Angular micro frontends, Django APIs, and GCP delivery.'
           },
           {
             period: '2024 · UBIAI',
             title: 'AI-Powered Annotation',
-            description: 'Delivered NLP features, elastic search, and DevOps automation that scale UBIAI’s data-labelling platform.'
+            description: 'Scaled multi-tenant annotation workflows, elastic search, and AWS/GCP automation to accelerate UBIAI’s NLP platform.'
           },
           {
             period: '2023 · Sisal',
             title: 'Experience Engineering',
-            description: 'Merged Java, AEM, and vanilla JS to power personalised digital journeys for a global lottery operator.'
+            description: 'Delivered Java + AEM experiences, QA automation, and omnichannel content for a global lottery operator.'
           }
         ]
       },
       chill: {
         heading: 'Take a Break and Chill With Me!',
+        intro: 'Choose between classic Tetris gameplay or live-code music with Strudel using the toggle below.',
         controlsTitle: 'Classic Tetris Controls:',
         controls: [
           '← → : Move left/right',
@@ -92,7 +96,28 @@ const resources = {
         gameOverTitle: 'Game Over!',
         finalScore: 'Final Score',
         playAgain: 'Play Again',
-        backHome: 'Back to Home'
+        backHome: 'Back to Home',
+        mode: {
+          classic: 'Classic Tetris',
+          strudel: 'Strudel Jam',
+          status: 'Mode: {{mode}}',
+          hintClassic: 'Drop blocks, clear lines, and chase a high score.',
+          hintStrudel: 'Live-code beats right here in the browser.',
+          heading: 'Strudel Live Coding IDE',
+          tip: 'Tip: type a pattern like <code>{{pattern}}</code> and hit Shift+Enter to play.',
+          samplesHeading: 'Try these patterns',
+          samplesSource: 'More Strudel songs on GitHub:',
+          copyPattern: 'Copy pattern',
+          copyManual: 'Select text & press Ctrl+C',
+          copied: 'Copied!',
+          freestyleHeading: 'Freestyle corner',
+          freestyleDescription: 'Leave a note about your jam and check back soon for recorded freestyles.',
+          playbackPlaceholder: 'Freestyle playback arriving soon.',
+          playbackCta: 'Stay tuned',
+          commentsLabel: 'Leave a comment',
+          commentsPlaceholder: 'Share your thoughts, requests, or shout-outs...',
+          commentsCta: 'Share (coming soon)'
+        }
       },
       contact: {
         title: 'Get In Touch',
@@ -112,7 +137,7 @@ const resources = {
         status: {
           success: 'Message sent successfully! I will get back to you soon.',
           error: 'Failed to send message: {{error}}',
-          defaultError: 'Please try again or contact me directly at azeer.ltifi@gmail.com'
+          defaultError: 'Please try again or contact me directly at azeer.ltifi@gmail.com or azseza@tutamail.com'
         },
         direct: 'Or contact me directly at:'
       },
@@ -121,9 +146,25 @@ const resources = {
           name: 'AZER LTIFI',
           title: 'FULL-STACK ENGINEER',
           phone: '+216 55 22 77 98',
-          email: 'azeer.ltifi@gmail.com',
+          email: 'azeer.ltifi@gmail.com, azseza@tutamail.com',
           location: 'Tunis, Tunisia'
         },
+        sectionTitles: {
+          summary: 'Professional Summary',
+          achievements: 'Highlighted Achievements',
+          experience: 'Professional Experience',
+          education: 'Education',
+          strengths: 'Strengths & Ways of Working',
+          techToolkit: 'Technical Toolkit',
+          projects: 'Selected Projects',
+          languages: 'Languages',
+          volunteering: 'Community & Volunteering',
+          hobbies: 'Hobbies',
+          references: 'References'
+        },
+        technologiesLabel: 'Technologies:',
+        impactLabel: 'Impact:',
+        stackLabel: 'Stack:',
         summary: 'Dedicated and dynamic software engineer with a passion for open source collaboration and emerging technologies. Specialised in back-end development with Java and Python, fluent in Angular for front-end experiences, and confident with PostgreSQL administration and ELK-stack observability. Comfortable across the full delivery lifecycle—from architecture and containerisation with Docker to CI/CD automation on cloud platforms.',
         achievements: [
           {
@@ -344,7 +385,8 @@ const resources = {
         home: '01. Accueil',
         chill: '02. Détends-toi avec moi',
         resume: '03. CV',
-        contact: '04. Contact'
+        contact: '04. Contact',
+        toggle: 'Menu'
       },
       home: {
         greeting: 'Bonjour, je suis Azer Ltifi',
@@ -354,6 +396,8 @@ const resources = {
           primary: 'Voir mes réalisations',
           secondary: 'Me contacter'
         },
+        highlightsTitle: 'Ce que j\'apporte à l’équipe',
+        journeyTitle: 'Succès récents sur le terrain',
         highlights: [
           {
             icon: 'server',
@@ -380,22 +424,23 @@ const resources = {
           {
             period: '2024 · Tabhotel',
             title: 'Évolution SaaS hôtelière',
-            description: 'Modernisation des parcours de réservation, d’upsell et de fidélité pour les hôtels de charme via Angular et Django.'
+            description: 'Orchestration des parcours d’onboarding, d’upsell et de fidélité pour des hôtels-boutiques avec des micro-frontends Angular, des APIs Django et des pipelines GCP.'
           },
           {
             period: '2024 · UBIAI',
             title: 'Annotation augmentée par l’IA',
-            description: 'Livraison de fonctionnalités NLP, de recherche élastique et d’automatisation DevOps pour la plateforme d’étiquetage UBIAI.'
+            description: 'Montée en charge de workflows d’annotation multi-tenant, d’Elasticsearch et d’automatisation AWS/GCP pour accélérer la plateforme NLP d’UBIAI.'
           },
           {
             period: '2023 · Sisal',
             title: 'Expériences omnicanales',
-            description: 'Association Java, AEM et JavaScript pour proposer des parcours personnalisés pour un opérateur de loterie international.'
+            description: 'Livraison de composants Java + AEM, d’automatisation QA et de contenus omnicanaux pour un opérateur mondial de loterie.'
           }
         ]
       },
       chill: {
         heading: 'Faites une pause et détendez-vous avec moi !',
+        intro: 'Choisissez entre une partie de Tetris classique ou du live-coding musical avec Strudel grâce au sélecteur ci-dessous.',
         controlsTitle: 'Commandes Tetris classiques :',
         controls: [
           '← → : Déplacement gauche/droite',
@@ -418,7 +463,28 @@ const resources = {
         gameOverTitle: 'Partie terminée !',
         finalScore: 'Score final',
         playAgain: 'Rejouer',
-        backHome: "Retour à l'accueil"
+        backHome: "Retour à l'accueil",
+        mode: {
+          classic: 'Tetris classique',
+          strudel: 'Session Strudel',
+          status: 'Mode : {{mode}}',
+          hintClassic: 'Empile les blocs, fais des lignes et bats ton record.',
+          hintStrudel: 'Live-code de la musique directement dans le navigateur.',
+          heading: 'IDE Strudel de live coding',
+          tip: 'Astuce : tape un motif comme <code>{{pattern}}</code> puis presse Maj+Entrée pour jouer.',
+          samplesHeading: 'Essaye ces patterns',
+          samplesSource: 'Plus de morceaux Strudel sur GitHub :',
+          copyPattern: 'Copier le pattern',
+          copyManual: 'Sélectionne le texte puis fais Ctrl+C/⌘C',
+          copied: 'Copié !',
+          freestyleHeading: 'Coin freestyle',
+          freestyleDescription: 'Laisse un mot sur ton jam et reviens bientôt pour des freestyles enregistrés.',
+          playbackPlaceholder: 'Lecture freestyle disponible bientôt.',
+          playbackCta: 'Reste à l’écoute',
+          commentsLabel: 'Laisser un commentaire',
+          commentsPlaceholder: 'Partage tes idées, demandes ou dédicaces...',
+          commentsCta: 'Partager (bientôt)'
+        }
       },
       contact: {
         title: 'Entrons en contact',
@@ -438,7 +504,7 @@ const resources = {
         status: {
           success: 'Message envoyé ! Je vous répondrai rapidement.',
           error: 'Échec de l’envoi du message : {{error}}',
-          defaultError: 'Réessayez ou écrivez-moi directement à azeer.ltifi@gmail.com'
+          defaultError: 'Réessayez ou écrivez-moi directement à azeer.ltifi@gmail.com or azseza@tutamail.com'
         },
         direct: 'Ou contactez-moi directement :'
       },
@@ -447,9 +513,25 @@ const resources = {
           name: 'AZER LTIFI',
           title: 'INGÉNIEUR FULL STACK',
           phone: '+216 55 22 77 98',
-          email: 'azeer.ltifi@gmail.com',
+          email: 'azeer.ltifi@gmail.com, azseza@tutamail.com',
           location: 'Tunis, Tunisie'
         },
+        sectionTitles: {
+          summary: 'Résumé professionnel',
+          achievements: 'Réalisations clés',
+          experience: 'Expériences professionnelles',
+          education: 'Formation',
+          strengths: 'Forces & méthodes de travail',
+          techToolkit: 'Boîte à outils technique',
+          projects: 'Projets sélectionnés',
+          languages: 'Langues',
+          volunteering: 'Communauté & bénévolat',
+          hobbies: 'Centres d’intérêt',
+          references: 'Références'
+        },
+        technologiesLabel: 'Technologies :',
+        impactLabel: 'Impact :',
+        stackLabel: 'Stack :',
         summary: 'Ingénieur logiciel passionné par l’open source et les technologies émergentes. Spécialisé en développement back-end Java/Python, à l’aise sur Angular côté front et expert en administration PostgreSQL et observabilité ELK. Intervient sur toute la chaîne delivery : architecture, containerisation, automatisation CI/CD et exploitation cloud.',
         achievements: [
           {
@@ -670,7 +752,8 @@ const resources = {
         home: '01. Inicio',
         chill: '02. Relájate conmigo',
         resume: '03. Currículum',
-        contact: '04. Contacto'
+        contact: '04. Contacto',
+        toggle: 'Menú'
       },
       home: {
         greeting: 'Hola, soy Azer Ltifi',
@@ -680,6 +763,8 @@ const resources = {
           primary: 'Ver mi trabajo',
           secondary: 'Hablemos'
         },
+        highlightsTitle: 'Lo que aporto al equipo',
+        journeyTitle: 'Logros recientes en el terreno',
         highlights: [
           {
             icon: 'server',
@@ -706,22 +791,23 @@ const resources = {
           {
             period: '2024 · Tabhotel',
             title: 'Evolución SaaS hotelera',
-            description: 'Modernización de reservas, upsell y fidelización para hoteles boutique mediante Angular y Django.'
+            description: 'Orquestación de onboarding, upsell y fidelización para hoteles boutique con micro-frontends Angular, APIs Django y pipelines en GCP.'
           },
           {
             period: '2024 · UBIAI',
             title: 'Anotación con IA',
-            description: 'Entregué funciones NLP, búsqueda elástica y automatización DevOps para la plataforma de etiquetado de UBIAI.'
+            description: 'Escalé flujos de anotación multi-tenant, ElasticSearch y automatización AWS/GCP para acelerar la plataforma NLP de UBIAI.'
           },
           {
             period: '2023 · Sisal',
             title: 'Experiencias omnicanal',
-            description: 'Fusioné Java, AEM y JavaScript para ofrecer recorridos personalizados a un operador global de lotería.'
+            description: 'Implementé componentes Java + AEM, automatización QA y experiencias omnicanal para un operador global de lotería.'
           }
         ]
       },
       chill: {
         heading: '¡Tómate un descanso y relájate conmigo!',
+        intro: 'Elige entre jugar al Tetris clásico o hacer música en Strudel con el selector inferior.',
         controlsTitle: 'Controles clásicos de Tetris:',
         controls: [
           '← → : Mover a izquierda/derecha',
@@ -744,7 +830,28 @@ const resources = {
         gameOverTitle: '¡Fin del juego!',
         finalScore: 'Puntuación final',
         playAgain: 'Jugar de nuevo',
-        backHome: 'Volver al inicio'
+        backHome: 'Volver al inicio',
+        mode: {
+          classic: 'Tetris clásico',
+          strudel: 'Jam de Strudel',
+          status: 'Modo: {{mode}}',
+          hintClassic: 'Deja caer piezas, limpia líneas y busca tu récord.',
+          hintStrudel: 'Live-codea beats desde el navegador.',
+          heading: 'IDE de live coding Strudel',
+          tip: 'Tip: escribe un patrón como <code>{{pattern}}</code> y pulsa Shift+Enter para sonar.',
+          samplesHeading: 'Prueba estos patrones',
+          samplesSource: 'Más canciones de Strudel en GitHub:',
+          copyPattern: 'Copiar patrón',
+          copyManual: 'Selecciona el texto y pulsa Ctrl+C/⌘C',
+          copied: '¡Copiado!',
+          freestyleHeading: 'Rincón freestyle',
+          freestyleDescription: 'Deja un mensaje sobre tu jam y vuelve pronto para escuchar freestyles grabados.',
+          playbackPlaceholder: 'Reproducción freestyle disponible pronto.',
+          playbackCta: 'Mantente atento',
+          commentsLabel: 'Deja un comentario',
+          commentsPlaceholder: 'Comparte tus ideas, peticiones o saludos...',
+          commentsCta: 'Compartir (próximamente)'
+        }
       },
       contact: {
         title: 'Pongámonos en contacto',
@@ -764,7 +871,7 @@ const resources = {
         status: {
           success: 'Mensaje enviado correctamente. Me pondré en contacto pronto.',
           error: 'No se pudo enviar el mensaje: {{error}}',
-          defaultError: 'Vuelve a intentarlo o escríbeme directamente a azeer.ltifi@gmail.com'
+          defaultError: 'Vuelve a intentarlo o escríbeme directamente a azeer.ltifi@gmail.com or azseza@tutamail.com'
         },
         direct: 'O contáctame directamente en:'
       },
@@ -773,9 +880,25 @@ const resources = {
           name: 'AZER LTIFI',
           title: 'INGENIERO FULL STACK',
           phone: '+216 55 22 77 98',
-          email: 'azeer.ltifi@gmail.com',
+          email: 'azeer.ltifi@gmail.com, azseza@tutamail.com',
           location: 'Túnez, Túnez'
         },
+        sectionTitles: {
+          summary: 'Resumen profesional',
+          achievements: 'Logros destacados',
+          experience: 'Experiencia profesional',
+          education: 'Educación',
+          strengths: 'Fortalezas y forma de trabajo',
+          techToolkit: 'Kit técnico',
+          projects: 'Proyectos destacados',
+          languages: 'Idiomas',
+          volunteering: 'Comunidad y voluntariado',
+          hobbies: 'Aficiones',
+          references: 'Referencias'
+        },
+        technologiesLabel: 'Tecnologías:',
+        impactLabel: 'Impacto:',
+        stackLabel: 'Stack:',
         summary: 'Ingeniero de software apasionado por el open source y las tecnologías emergentes. Especialista en back-end con Java y Python, competente en Angular para el front-end y experto en administración PostgreSQL y observabilidad ELK. Cubre todo el ciclo de entrega: arquitectura, contenedores y automatización CI/CD en la nube.',
         achievements: [
           {
@@ -996,7 +1119,8 @@ const resources = {
         home: '01. Início',
         chill: '02. Relaxe comigo',
         resume: '03. Currículo',
-        contact: '04. Contato'
+        contact: '04. Contato',
+        toggle: 'Menu'
       },
       home: {
         greeting: 'Olá, sou Azer Ltifi',
@@ -1006,6 +1130,8 @@ const resources = {
           primary: 'Ver meu trabalho',
           secondary: 'Fale comigo'
         },
+        highlightsTitle: 'O que levo para o time',
+        journeyTitle: 'Conquistas recentes em campo',
         highlights: [
           {
             icon: 'server',
@@ -1032,22 +1158,23 @@ const resources = {
           {
             period: '2024 · Tabhotel',
             title: 'Evolução SaaS hoteleira',
-            description: 'Modernização de reservas, upsell e fidelização para hotéis boutique usando Angular e Django.'
+            description: 'Orquestrei onboarding, upsell e fidelização para hotéis boutique com micro-frontends Angular, APIs Django e pipelines GCP.'
           },
           {
             period: '2024 · UBIAI',
             title: 'Anotação com IA',
-            description: 'Entreguei recursos de NLP, busca elástica e automação DevOps para a plataforma de rotulagem da UBIAI.'
+            description: 'Escalei workflows de anotação multi-tenant, ElasticSearch e automação AWS/GCP para acelerar a plataforma NLP da UBIAI.'
           },
           {
             period: '2023 · Sisal',
             title: 'Experiências omnichannel',
-            description: 'Combinei Java, AEM e JavaScript para oferecer jornadas digitais personalizadas a um operador global de loterias.'
+            description: 'Entreguei componentes Java + AEM, automação de QA e experiências omnicanal para um operador global de loteria.'
           }
         ]
       },
       chill: {
         heading: 'Faça uma pausa e relaxe comigo!',
+        intro: 'Escolha entre o Tetris clássico ou live-code de música com Strudel usando o seletor abaixo.',
         controlsTitle: 'Controles clássicos de Tetris:',
         controls: [
           '← → : Mover esquerda/direita',
@@ -1070,7 +1197,28 @@ const resources = {
         gameOverTitle: 'Fim de jogo!',
         finalScore: 'Pontuação final',
         playAgain: 'Jogar novamente',
-        backHome: 'Voltar ao início'
+        backHome: 'Voltar ao início',
+        mode: {
+          classic: 'Tetris clássico',
+          strudel: 'Jam Strudel',
+          status: 'Modo: {{mode}}',
+          hintClassic: 'Derrube blocos, limpe linhas e corra atrás do recorde.',
+          hintStrudel: 'Live-code de beats direto no navegador.',
+          heading: 'IDE de live coding Strudel',
+          tip: 'Dica: digite um padrão como <code>{{pattern}}</code> e aperte Shift+Enter para tocar.',
+          samplesHeading: 'Experimente estes patterns',
+          samplesSource: 'Mais músicas Strudel no GitHub:',
+          copyPattern: 'Copiar pattern',
+          copyManual: 'Selecione o texto e pressione Ctrl+C/⌘C',
+          copied: 'Copiado!',
+          freestyleHeading: 'Espaço freestyle',
+          freestyleDescription: 'Deixe um recado sobre seu jam e volte em breve para ouvir freestyles gravados.',
+          playbackPlaceholder: 'Reprodução do freestyle em breve.',
+          playbackCta: 'Fique ligado',
+          commentsLabel: 'Deixe um comentário',
+          commentsPlaceholder: 'Compartilhe suas ideias, pedidos ou saudações...',
+          commentsCta: 'Compartilhar (em breve)'
+        }
       },
       contact: {
         title: 'Vamos conversar',
@@ -1090,7 +1238,7 @@ const resources = {
         status: {
           success: 'Mensagem enviada com sucesso! Entrarei em contato em breve.',
           error: 'Falha ao enviar mensagem: {{error}}',
-          defaultError: 'Tente novamente ou escreva diretamente para azeer.ltifi@gmail.com'
+          defaultError: 'Tente novamente ou escreva diretamente para azeer.ltifi@gmail.com or azseza@tutamail.com'
         },
         direct: 'Ou fale comigo diretamente em:'
       },
@@ -1099,9 +1247,25 @@ const resources = {
           name: 'AZER LTIFI',
           title: 'ENGENHEIRO FULL STACK',
           phone: '+216 55 22 77 98',
-          email: 'azeer.ltifi@gmail.com',
+          email: 'azeer.ltifi@gmail.com, azseza@tutamail.com',
           location: 'Túnis, Tunísia'
         },
+        sectionTitles: {
+          summary: 'Resumo profissional',
+          achievements: 'Principais conquistas',
+          experience: 'Experiência profissional',
+          education: 'Formação',
+          strengths: 'Forças e forma de trabalho',
+          techToolkit: 'Ferramentas técnicas',
+          projects: 'Projetos selecionados',
+          languages: 'Idiomas',
+          volunteering: 'Comunidade e voluntariado',
+          hobbies: 'Hobbies',
+          references: 'Referências'
+        },
+        technologiesLabel: 'Tecnologias:',
+        impactLabel: 'Impacto:',
+        stackLabel: 'Stack:',
         summary: 'Engenheiro de software apaixonado por open source e tecnologias emergentes. Especialista em back-end com Java e Python, confortável em Angular no front-end e experiente em administração PostgreSQL e observabilidade ELK. Atua em todo o ciclo de entrega: arquitetura, conteinerização, CI/CD e operação em nuvem.',
         achievements: [
           {
@@ -1322,7 +1486,8 @@ const resources = {
         home: '01. Start',
         chill: '02. Entspann dich mit mir',
         resume: '03. Lebenslauf',
-        contact: '04. Kontakt'
+        contact: '04. Kontakt',
+        toggle: 'Menü'
       },
       home: {
         greeting: 'Hallo, ich bin Azer Ltifi',
@@ -1332,6 +1497,8 @@ const resources = {
           primary: 'Meine Arbeit ansehen',
           secondary: 'Kontakt aufnehmen'
         },
+        highlightsTitle: 'Was ich ins Team einbringe',
+        journeyTitle: 'Aktuelle Erfolge vor Ort',
         highlights: [
           {
             icon: 'server',
@@ -1358,22 +1525,23 @@ const resources = {
           {
             period: '2024 · Tabhotel',
             title: 'Hospiz-SaaS-Weiterentwicklung',
-            description: 'Modernisierung von Buchungs-, Upsell- und Loyalitätsprozessen für Boutique-Hotels mit Angular und Django.'
+            description: 'Steuerung von Onboarding-, Upsell- und Loyalitätsflows für Boutique-Hotels mit Angular-Microfrontends, Django-APIs und GCP-Pipelines.'
           },
           {
             period: '2024 · UBIAI',
             title: 'KI-gestützte Annotation',
-            description: 'Lieferung von NLP-Funktionen, elastic Search und DevOps-Automatisierung für die UBIAI-Plattform.'
+            description: 'Skalierung von Multi-Tenant-Annotierungsworkflows, ElasticSearch und AWS/GCP-Automatisierung für die NLP-Plattform von UBIAI.'
           },
           {
             period: '2023 · Sisal',
             title: 'Omnikanal-Erlebnisse',
-            description: 'Integration von Java, AEM und JavaScript für personalisierte Customer Journeys eines internationalen Lotterieanbieters.'
+            description: 'Bereitstellung von Java- und AEM-Komponenten, QA-Automatisierung und Omnichannel-Erlebnissen für einen globalen Lotterieanbieter.'
           }
         ]
       },
       chill: {
         heading: 'Mach eine Pause und entspann dich mit mir!',
+        intro: 'Wähle über den Schalter unten zwischen klassischem Tetris und einem Strudel-Live-Coding-Jam.',
         controlsTitle: 'Klassische Tetris-Steuerung:',
         controls: [
           '← → : Links/Rechts bewegen',
@@ -1396,7 +1564,28 @@ const resources = {
         gameOverTitle: 'Spiel vorbei!',
         finalScore: 'Endstand',
         playAgain: 'Noch einmal',
-        backHome: 'Zur Startseite'
+        backHome: 'Zur Startseite',
+        mode: {
+          classic: 'Klassisches Tetris',
+          strudel: 'Strudel-Jam',
+          status: 'Modus: {{mode}}',
+          hintClassic: 'Staple Steine, lösche Reihen und knack den Highscore.',
+          hintStrudel: 'Live-Code deine Beats direkt im Browser.',
+          heading: 'Strudel Live-Coding-IDE',
+          tip: 'Tipp: Tippe ein Pattern wie <code>{{pattern}}</code> und drücke Shift+Enter zum Abspielen.',
+          samplesHeading: 'Probiere diese Patterns',
+          samplesSource: 'Weitere Strudel-Tracks auf GitHub:',
+          copyPattern: 'Pattern kopieren',
+          copyManual: 'Text markieren und Strg+C/⌘C drücken',
+          copied: 'Kopiert!',
+          freestyleHeading: 'Freestyle-Ecke',
+          freestyleDescription: 'Hinterlasse eine Nachricht zu deinem Jam und schau bald für aufgenommene Freestyles vorbei.',
+          playbackPlaceholder: 'Freestyle-Wiedergabe folgt bald.',
+          playbackCta: 'Bleib dran',
+          commentsLabel: 'Kommentar hinterlassen',
+          commentsPlaceholder: 'Teile deine Gedanken, Wünsche oder Grüße...',
+          commentsCta: 'Teilen (bald verfügbar)'
+        }
       },
       contact: {
         title: 'Kontakt aufnehmen',
@@ -1416,7 +1605,7 @@ const resources = {
         status: {
           success: 'Nachricht erfolgreich gesendet! Ich melde mich bald.',
           error: 'Nachricht konnte nicht gesendet werden: {{error}}',
-          defaultError: 'Bitte erneut versuchen oder direkt an azeer.ltifi@gmail.com schreiben'
+          defaultError: 'Bitte erneut versuchen oder direkt an azeer.ltifi@gmail.com or azseza@tutamail.com schreiben'
         },
         direct: 'Oder schreibe mir direkt an:'
       },
@@ -1425,9 +1614,25 @@ const resources = {
           name: 'AZER LTIFI',
           title: 'FULL-STACK-ENGINEER',
           phone: '+216 55 22 77 98',
-          email: 'azeer.ltifi@gmail.com',
+          email: 'azeer.ltifi@gmail.com, azseza@tutamail.com',
           location: 'Tunis, Tunesien'
         },
+        sectionTitles: {
+          summary: 'Berufliches Profil',
+          achievements: 'Wichtige Erfolge',
+          experience: 'Berufserfahrung',
+          education: 'Ausbildung',
+          strengths: 'Stärken & Arbeitsweise',
+          techToolkit: 'Technologie-Stack',
+          projects: 'Ausgewählte Projekte',
+          languages: 'Sprachen',
+          volunteering: 'Gemeinschaft & Ehrenamt',
+          hobbies: 'Hobbys',
+          references: 'Referenzen'
+        },
+        technologiesLabel: 'Technologien:',
+        impactLabel: 'Wirkung:',
+        stackLabel: 'Stack:',
         summary: 'Engagierter Softwareingenieur mit Leidenschaft für Open Source und neue Technologien. Spezialisiert auf Back-End mit Java und Python, versiert in Angular-Frontends sowie PostgreSQL-Administration und ELK-Observability. Beherrscht den gesamten Delivery-Prozess von Architektur über Containerisierung bis zu CI/CD in der Cloud.',
         achievements: [
           {
@@ -1634,15 +1839,55 @@ const resources = {
   }
 };
 
+const supportedLanguages = Object.keys(resources);
+
+const getInitialLanguage = () => {
+  if (typeof window === 'undefined') {
+    return 'en';
+  }
+
+  try {
+    const stored = window.localStorage.getItem('preferredLanguage');
+    if (stored && supportedLanguages.includes(stored)) {
+      return stored;
+    }
+
+    const navigatorLang = window.navigator.language
+      ? window.navigator.language.split('-')[0]
+      : null;
+    if (navigatorLang && supportedLanguages.includes(navigatorLang)) {
+      return navigatorLang;
+    }
+  } catch (error) {
+    // Ignore storage access issues and fall back to default language
+  }
+
+  return 'en';
+};
+
+const initialLanguage = getInitialLanguage();
+
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en',
+    lng: initialLanguage,
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false
     }
   });
+
+if (typeof window !== 'undefined') {
+  i18n.on('languageChanged', (lng) => {
+    if (supportedLanguages.includes(lng)) {
+      try {
+        window.localStorage.setItem('preferredLanguage', lng);
+      } catch (error) {
+        // Ignore persistence errors
+      }
+    }
+  });
+}
 
 export default i18n;

@@ -6,7 +6,6 @@ import { playerController } from "../domain/PlayerController";
 
 import { useInterval } from "../hooks/useInterval";
 import { useDropTime } from "../hooks/useDropTime";
-import { useSound } from "../hooks/useSound";
 
 const GameController = forwardRef(
   (
@@ -16,8 +15,6 @@ const GameController = forwardRef(
     const [dropTime, pauseDropTime, resumeDropTime] = useDropTime({
       gameStats
     });
-    const playSound = useSound();
-
     useInterval(() => {
       handleInput({ action: Action.SlowDrop });
     }, dropTime);
@@ -31,15 +28,7 @@ const GameController = forwardRef(
         setGameOver
       });
 
-      // Play appropriate sound effect
-      if (action === Action.Rotate) {
-        playSound('ROTATE');
-      } else if (action === Action.FastDrop || action === Action.SlowDrop) {
-        playSound('DROP');
-      } else if (action === Action.Left || action === Action.Right) {
-        playSound('MOVE');
-      }
-    }, [board, player, setPlayer, setGameOver, playSound]);
+    }, [board, player, setPlayer, setGameOver]);
 
     const onKeyUp = useCallback(({ code }) => {
       const action = actionForKey(code);

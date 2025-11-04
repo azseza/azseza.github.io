@@ -1,4 +1,5 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 import Tetris from '../components/Tetris';
 import VolenteerExperience from '../components/VolenteerExperience';
 import './ChillContainer.css';
@@ -29,29 +30,20 @@ class ChillContainer extends React.Component {
       }
     
       render() {
-    
+        const { t } = this.props;
+        const controls = t('chill.controls', { returnObjects: true }) || [];
+
         return (
-    
+
           <div className="chill-container">
-              <h2>Take a Break and Chill With Me!</h2>
+              <h2>{t('chill.heading', { defaultValue: 'Take a Break and Chill With Me!' })}</h2>
               <p className="chill-intro">
-                Choose between classic Tetris gameplay or live-code music with Strudel using the toggle below.
+                {t('chill.intro', { defaultValue: 'Choose between classic Tetris gameplay or live-code music with Strudel using the toggle below.' })}
               </p>
               {this.state.currentlyShowing === "Chill"
                 ?
                 <div className="game-wrapper">
                   <Tetris rows={20} columns={10} />
-                  <div className="game-controls">
-                    <h3>Classic Tetris Controls:</h3>
-                    <ul>
-                      <li>← → : Move left/right</li>
-                      <li>↑ : Rotate</li>
-                      <li>↓ : Soft drop</li>
-                      <li>Space : Hard drop</li>
-                      <li>P : Pause</li>
-                    </ul>
-                    <p className="mobile-controls">On mobile: Swipe to move, tap to rotate</p>
-                  </div>
                 </div>
                 : 
                 <div className="volunteer-section">
@@ -67,4 +59,4 @@ class ChillContainer extends React.Component {
       
     }
     
-    export default ChillContainer;
+    export default withTranslation()(ChillContainer);

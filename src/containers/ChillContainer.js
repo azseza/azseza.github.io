@@ -33,13 +33,16 @@ class ChillContainer extends React.Component {
         return (
     
           <div className="chill-container">
-              <h2>Take a Break and Play Tetris!</h2>
+              <h2>Take a Break and Chill With Me!</h2>
+              <p className="chill-intro">
+                Choose between classic Tetris gameplay or live-code music with Strudel using the toggle below.
+              </p>
               {this.state.currentlyShowing === "Chill"
                 ?
                 <div className="game-wrapper">
                   <Tetris rows={20} columns={10} />
                   <div className="game-controls">
-                    <h3>Controls:</h3>
+                    <h3>Classic Tetris Controls:</h3>
                     <ul>
                       <li>← → : Move left/right</li>
                       <li>↑ : Rotate</li>

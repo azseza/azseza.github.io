@@ -1,10 +1,9 @@
-import { useState, useCallback, useEffect, useRef } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { createBoard } from '../utils/gameHelpers';
 
 export const useStage = (player, resetPlayer) => {
   const [stage, setStage] = useState(createBoard());
   const [rowsCleared, setRowsCleared] = useState(0);
-  const isClearingRef = useRef(false);
 
   const sweepRows = useCallback((newStage) => {
     // Find rows that need to be cleared

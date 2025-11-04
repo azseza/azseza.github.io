@@ -23,7 +23,7 @@ const Navigation = () => {
           01. Home
         </NavLink>
         <NavLink to='/chill' className={`navbar-links ${location.pathname === '/chill' ? 'active' : ''}`}>
-          02. Play Tetris
+          02. Chill With Me
         </NavLink>
         <NavLink to='/resume' className={`navbar-links ${location.pathname === '/resume' ? 'active' : ''}`}>
           03. Résumé

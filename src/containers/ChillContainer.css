@@ -19,6 +19,15 @@
   flex-shrink: 0;
 }
 
+.chill-intro {
+  text-align: center;
+  color: #ccd6f6;
+  margin: 0 0 0.75rem 0;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
 .game-wrapper {
   display: flex;
   gap: 2rem;

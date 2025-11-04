@@ -1,17 +1,17 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 
+const LINE_POINTS = [40, 100, 300, 1200];
+
 export const useGameStatus = (rowsCleared) => {
   const [score, setScore] = useState(0);
   const [rows, setRows] = useState(0);
   const [level, setLevel] = useState(0);
   const lastRowsClearedRef = useRef(0);
 
-  const linePoints = [40, 100, 300, 1200];
-
   const calcScore = useCallback(() => {
     if (rowsCleared > 0 && rowsCleared !== lastRowsClearedRef.current) {
       // Calculate points based on number of lines cleared and current level
-      const points = linePoints[Math.min(rowsCleared - 1, linePoints.length - 1)] * (level + 1);
+      const points = LINE_POINTS[Math.min(rowsCleared - 1, LINE_POINTS.length - 1)] * (level + 1);
       
       // Update score and rows with bounds checking
       setScore(prev => {
@@ -26,7 +26,7 @@ export const useGameStatus = (rowsCleared) => {
 
       lastRowsClearedRef.current = rowsCleared;
     }
-  }, [level, rowsCleared, linePoints]);
+  }, [level, rowsCleared]);
 
   useEffect(() => {
     calcScore();

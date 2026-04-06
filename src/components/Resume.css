@@ -48,7 +48,7 @@
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
   border: 1px solid rgba(100, 255, 218, 0.2);
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-item:hover {
@@ -71,7 +71,7 @@
   gap: 0.5rem;
   color: #64ffda;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-links a:hover {
@@ -382,7 +382,7 @@
   border-radius: 4px;
   text-decoration: none;
   font-size: 1.1rem;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .download-button:hover {

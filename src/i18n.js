@@ -44,8 +44,8 @@ const resources = {
           },
           {
             icon: 'robot',
-            title: 'Applied AI & NLP',
-            description: 'Creating language-driven experiences by blending practical machine learning with measurable business outcomes.'
+            title: 'Applied AI & Agents',
+            description: 'Building goal-oriented AI agent flows with Embabel on the JVM, and creating language-driven experiences that blend practical ML with measurable outcomes.'
           },
           {
             icon: 'team',
@@ -54,6 +54,11 @@ const resources = {
           }
         ],
         journey: [
+          {
+            period: '2025 · Open Source',
+            title: 'AI Agent Engineering',
+            description: 'Exploring the Embabel agent framework — building goal-oriented AI flows on the JVM with Spring AI, Kotlin, and Java.'
+          },
           {
             period: '2024 · Tabhotel',
             title: 'Hospitality SaaS Evolution',
@@ -165,7 +170,7 @@ const resources = {
         technologiesLabel: 'Technologies:',
         impactLabel: 'Impact:',
         stackLabel: 'Stack:',
-        summary: 'Dedicated and dynamic software engineer with a passion for open source collaboration and emerging technologies. Specialised in back-end development with Java and Python, fluent in Angular for front-end experiences, and confident with PostgreSQL administration and ELK-stack observability. Comfortable across the full delivery lifecycle—from architecture and containerisation with Docker to CI/CD automation on cloud platforms.',
+        summary: 'Dedicated and dynamic software engineer with a passion for open source collaboration and emerging technologies. Specialised in back-end development with Java and Python, fluent in Angular for front-end experiences, and confident with PostgreSQL administration and ELK-stack observability. Enthusiastic about agentic AI — exploring frameworks like Embabel for goal-oriented AI agent flows on the JVM. Comfortable across the full delivery lifecycle — from architecture and containerisation with Docker to CI/CD automation on cloud platforms.',
         achievements: [
           {
             title: 'Hospitality Platform Modernisation',
@@ -178,6 +183,10 @@ const resources = {
           {
             title: 'Mission-Critical Government Platforms',
             detail: 'Built resilient monitoring and reporting tools that support fisheries regulation and healthcare collaboration across Africa.'
+          },
+          {
+            title: 'Agentic AI on the JVM',
+            detail: 'Prototyping intelligent agent workflows with Embabel and Spring AI, applying goal-oriented action planning to automate complex business processes.'
           }
         ],
         experiences: [
@@ -306,6 +315,10 @@ const resources = {
           {
             label: 'Data & Observability',
             items: ['PostgreSQL', 'SQL Database Administration', 'ELK Stack', 'Haystack']
+          },
+          {
+            label: 'AI & Agents',
+            items: ['Embabel', 'Spring AI', 'NLP', 'Transformers', 'BERT', 'Haystack', 'LLM Integration']
           }
         ],
         projects: [
@@ -326,9 +339,15 @@ const resources = {
             description: 'Shipped customisable pipelines, elastic search, and review experiences to speed up dataset labelling.',
             impact: 'Improved labeller productivity and surfaced realistic quality metrics for go-to-market reporting.',
             tech: 'Django, Django REST Framework, Elasticsearch, Haystack, AWS'
+          },
+          {
+            name: 'AI Agent Experimentation with Embabel',
+            description: 'Prototyping goal-oriented AI agent workflows on the JVM using the Embabel framework, Spring AI, and Kotlin.',
+            impact: 'Exploring agentic patterns like GOAP planning, multi-model orchestration, and strongly-typed LLM integration for real-world automation.',
+            tech: 'Java, Kotlin, Embabel, Spring AI, Spring Boot'
           }
         ],
-        hobbies: ['Open source contribution', 'Gaming', 'Cooking'],
+        hobbies: ['Open source contribution', 'AI agent research', 'Gaming', 'Cooking'],
         languages: [
           { name: 'English', level: 'Professional working proficiency' },
           { name: 'French', level: 'Professional working proficiency' },

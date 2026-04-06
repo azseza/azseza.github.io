@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FaServer, FaCloud, FaRobot, FaUsersCog, FaLinux, FaDocker, FaGitAlt, FaReact, FaPython, FaJava, FaAngular } from 'react-icons/fa';
 import { SiVim, SiKubernetes, SiSpring } from 'react-icons/si';
+import profilePic from '../media/azerLtifi.png';
 import './Home.css';
 
 const ICON_MAP = {
@@ -48,30 +49,37 @@ const Home = () => {
   });
 
   const journeyMilestones = t('home.journey', { returnObjects: true }) || [];
-
   const highlightsTitle = t('home.highlightsTitle', { defaultValue: 'What I Bring To The Team' });
   const journeyTitle = t('home.journeyTitle', { defaultValue: 'Recent Wins On The Ground' });
 
   return (
     <div className="home-container">
       <div className="home-content">
-        <div className="open-source-symbols">
-          {TECH_ICONS.map((tech, index) => (
-            <div
-              className={`symbol ${currentSymbol === index ? 'active' : ''} ${tech.spin ? 'spin-icon' : ''}`}
-              key={tech.label}
-            >
-              <tech.Icon aria-label={tech.label} />
+        <section className={`hero-section ${isMounted ? 'visible' : ''}`}>
+          <div className="hero-text">
+            <div className="open-source-symbols">
+              {TECH_ICONS.map((tech, index) => (
+                <div
+                  className={`symbol ${currentSymbol === index ? 'active' : ''} ${tech.spin ? 'spin-icon' : ''}`}
+                  key={tech.label}
+                >
+                  <tech.Icon aria-label={tech.label} />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <h1>{t('home.greeting', { defaultValue: "Hi, I'm Azer Ltifi" })}</h1>
-        <h2>{t('home.role', { defaultValue: 'Full Stack Developer' })}</h2>
-        <p>{t('home.tagline', { defaultValue: 'I build things for the web.' })}</p>
-        <div className="cta-buttons">
-          <Link to="/resume" className="cta-button primary">{t('home.cta.primary', { defaultValue: 'View My Work' })}</Link>
-          <Link to="/contact" className="cta-button secondary">{t('home.cta.secondary', { defaultValue: 'Get In Touch' })}</Link>
-        </div>
+            <h1>{t('home.greeting', { defaultValue: "Hi, I'm Azer Ltifi" })}</h1>
+            <h2>{t('home.role', { defaultValue: 'Full Stack Developer' })}</h2>
+            <p>{t('home.tagline', { defaultValue: 'I build things for the web.' })}</p>
+            <div className="cta-buttons">
+              <Link to="/resume" className="cta-button primary">{t('home.cta.primary', { defaultValue: 'View My Work' })}</Link>
+              <Link to="/contact" className="cta-button secondary">{t('home.cta.secondary', { defaultValue: 'Get In Touch' })}</Link>
+            </div>
+          </div>
+          <div className="hero-image">
+            <img src={profilePic} alt="Azer Ltifi" />
+          </div>
+        </section>
+
         <section className={`home-highlights ${isMounted ? 'visible' : ''}`}>
           <h3>{highlightsTitle}</h3>
           <div className="highlight-grid">
@@ -91,6 +99,7 @@ const Home = () => {
             })}
           </div>
         </section>
+
         <section className={`home-journey ${isMounted ? 'visible' : ''}`}>
           <h3>{journeyTitle}</h3>
           <div className="journey-timeline">

@@ -1,15 +1,8 @@
+import React from 'react';
 import Home from '../components/Home';
 
-function HomeContainer() {
+const HomeContainer = () => {
+  return <Home />;
+};
 
-    return (
-  
-      <div className="containers" >
-        <Home />
-      </div>
-      
-    );
-    
-  }
-  
-  export default HomeContainer;
+export default HomeContainer;
